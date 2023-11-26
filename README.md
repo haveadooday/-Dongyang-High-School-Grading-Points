@@ -1,1 +1,5 @@
-# -Dongyang-High-School-Grading-Points
+# Dongyang-High-School-Grading-Points
+
+2023학년도 동양고등학교 AI프로그래밍 동아리에서 제작한 가채점 사이트 입니다.
+시간이 없어서 스파게티 코드에 발적화 하였으니 참고 부탁드립니다.
+활용하시기에 적절하지는 않을겁니다.
