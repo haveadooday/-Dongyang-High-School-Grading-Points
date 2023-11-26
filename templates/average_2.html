@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="robots" content="noindex">
+	<link rel="shortcut icon" type="image⁄x-icon" href="{{ url_for('download_dongyang_icon') }}">
+    <meta charset="utf-8">
+    <title>동양고 내신 등급컷</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, 
+  maximum-scale=1.0, minimum-scale=1.0">
+	<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <style>
+        /* 화면 폭이 1000px 미만인 경우에만 적용됩니다. */
+        @media screen and (max-width: 1000px) {
+
+		th, td {
+			width: 60%; /* 셀의 너비를 자동으로 조정합니다. */
+			display: table-cell; /* 원래의 셀 배치 속성으로 변경합니다. */
+			text-align: center; /* 셀 안의 내용을 가운데 정렬합니다. */
+		}
+	}
+		/* 화면 폭이 1000px 초과인 경우에만 적용됩니다. */
+        @media screen and (min-width: 1001px) {
+            table {
+                float: left;
+                width: 30%; /* 테이블 너비 조정 */
+				
+            }
+        }
+		
+    </style>
+	
+	
+</head>
+<body>
+	  
+	<div id="wrap">
+	
+	<div id="header">
+	<a href="/"><img style="max-width: 100%; height: auto; display: block; margin: 0 auto;" src="{{ url_for('static', filename='image/title.png') }}"></a>
+	<img style="  width: 70%; height: auto; display: block; margin: 0 auto;" src="{{ url_for('static', filename='image/내신등급컷_안내사항.png') }}">
+		
+    </div>
+	
+	<div id="body">
+	<table border="독서">
+	<tr align ="center">
+	<p><td colspan = "2" span>독서</td></p>
+    </tr>
+	<th>등급</th>
+	<th>등급컷 원점수 범위</th>
+	<tr><!-- 첫번째 줄 시작 -->
+	    <td>1등급</td>
+		<td>{{ korean[0] }}</td>
+	</tr><!-- 첫번째 줄 끝 -->
+	<tr><!-- 두번째 줄 시작 -->
+	    <td>2등급</td>
+		<td>{{ korean[1] }}</td>
+	</tr><!-- 두번째 줄 끝 -->
+	<tr><!-- 두번째 줄 시작 -->
+	    <td>3등급</td>
+		<td>{{ korean[2] }}</td>
+	</tr><!-- 두번째 줄 끝 -->
+	<tr><!-- 두번째 줄 시작 -->
+	    <td>4등급</td>
+		<td>{{ korean[3] }}</td>
+	</tr><!-- 두번째 줄 끝 -->
+	<tr><!-- 두번째 줄 시작 -->
+	    <td>5등급</td>
+		<td>{{ korean[4] }}</td>
+	</tr><!-- 두번째 줄 끝 -->
+	<tr><!-- 두번째 줄 시작 -->
+	    <td>6등급</td>
+		<td>{{ korean[5] }}</td>
+	</tr><!-- 두번째 줄 끝 -->
+	<tr><!-- 두번째 줄 시작 -->
+	    <td>7등급</td>
+		<td>{{ korean[6] }}</td>
+	</tr><!-- 두번째 줄 끝 -->
+	<tr><!-- 두번째 줄 시작 -->
+	    <td>8등급</td>
+		<td>{{ korean[7] }}</td>
+	</tr><!-- 두번째 줄 끝 -->
+	<tr><!-- 두번째 줄 시작 -->
+	    <td>9등급</td>
+		<td>{{ korean[8] }}</td>
+	</tr><!-- 두번째 줄 끝 -->
+    </table>
+	
+	<table border="수 II">
+	<tr align ="center">
+	<p><td colspan = "2" span>수 II</td></p>
+    </tr>
+	<th>등급</th>
+	<th>등급컷 원점수 범위</th>
+	<tr><!-- 첫번째 줄 시작 -->
+	    <td>1등급</td>
+		<td>{{ math[0] }}</td>
+	</tr><!-- 첫번째 줄 끝 -->
+	<tr><!-- 두번째 줄 시작 -->
+	    <td>2등급</td>
+		<td>{{ math[1] }}</td>
+	</tr><!-- 두번째 줄 끝 -->
+	<tr><!-- 두번째 줄 시작 -->
+	    <td>3등급</td>
+		<td>{{ math[2] }}</td>
+	</tr><!-- 두번째 줄 끝 -->
+	<tr><!-- 두번째 줄 시작 -->
+	    <td>4등급</td>
+		<td>{{ math[3] }}</td>
+	</tr><!-- 두번째 줄 끝 -->
+	<tr><!-- 두번째 줄 시작 -->
+	    <td>5등급</td>
+		<td>{{ math[4] }}</td>
+	</tr><!-- 두번째 줄 끝 -->
+	<tr><!-- 두번째 줄 시작 -->
+	    <td>6등급</td>
+		<td>{{ math[5] }}</td>
+	</tr><!-- 두번째 줄 끝 -->
+	<tr><!-- 두번째 줄 시작 -->
+	    <td>7등급</td>
+		<td>{{ math[6] }}</td>
+	</tr><!-- 두번째 줄 끝 -->
+	<tr><!-- 두번째 줄 시작 -->
+	    <td>8등급</td>
+		<td>{{ math[7] }}</td>
+	</tr><!-- 두번째 줄 끝 -->
+	<tr><!-- 두번째 줄 시작 -->
+	    <td>9등급</td>
+		<td>{{ math[8] }}</td>
+	</table>
+	
+	<table border="영어 II">
+	<tr align ="center">
+	<p><td colspan = "2" span>영어 II</td></p>
+    </tr>
+	<th>등급</th>
+	<th>등급컷 원점수 범위</th>
+	<tr><!-- 첫번째 줄 시작 -->
+	    <td>1등급</td>
+		<td>{{ english[0] }}</td>
+	</tr><!-- 첫번째 줄 끝 -->
+	<tr><!-- 두번째 줄 시작 -->
+	    <td>2등급</td>
+		<td>{{ english[1] }}</td>
+	</tr><!-- 두번째 줄 끝 -->
+	<tr><!-- 두번째 줄 시작 -->
+	    <td>3등급</td>
+		<td>{{ english[2] }}</td>
+	</tr><!-- 두번째 줄 끝 -->
+	<tr><!-- 두번째 줄 시작 -->
+	    <td>4등급</td>
+		<td>{{ english[3] }}</td>
+	</tr><!-- 두번째 줄 끝 -->
+	<tr><!-- 두번째 줄 시작 -->
+	    <td>5등급</td>
+		<td>{{ english[4] }}</td>
+	</tr><!-- 두번째 줄 끝 -->
+	<tr><!-- 두번째 줄 시작 -->
+	    <td>6등급</td>
+		<td>{{ english[5] }}</td>
+	</tr><!-- 두번째 줄 끝 -->
+	<tr><!-- 두번째 줄 시작 -->
+	    <td>7등급</td>
+		<td>{{ english[6] }}</td>
+	</tr><!-- 두번째 줄 끝 -->
+	<tr><!-- 두번째 줄 시작 -->
+	    <td>8등급</td>
+		<td>{{ english[7] }}</td>
+	</tr><!-- 두번째 줄 끝 -->
+	<tr><!-- 두번째 줄 시작 -->
+	    <td>9등급</td>
+		<td>{{ english[8] }}</td>
+	</table>
+	
+	<table border="물리 I">
+	<tr align ="center">
+	<p><td colspan = "2" span>물리 I</td></p>
+    </tr>
+	<th>등급</th>
+	<th>등급컷 원점수 범위</th>
+	<tr><!-- 첫번째 줄 시작 -->
+	    <td>1등급</td>
+		<td>{{ physical[0] }}</td>
+	</tr><!-- 첫번째 줄 끝 -->
+	<tr><!-- 두번째 줄 시작 -->
+	    <td>2등급</td>
+		<td>{{ physical[1] }}</td>
+	</tr><!-- 두번째 줄 끝 -->
+	<tr><!-- 두번째 줄 시작 -->
+	    <td>3등급</td>
+		<td>{{ physical[2] }}</td>
+	</tr><!-- 두번째 줄 끝 -->
+	<tr><!-- 두번째 줄 시작 -->
+	    <td>4등급</td>
+		<td>{{ physical[3] }}</td>
+	</tr><!-- 두번째 줄 끝 -->
+	<tr><!-- 두번째 줄 시작 -->
+	    <td>5등급</td>
+		<td>{{ physical[4] }}</td>
+	</tr><!-- 두번째 줄 끝 -->
+	<tr><!-- 두번째 줄 시작 -->
+	    <td>6등급</td>
+		<td>{{ physical[5] }}</td>
+	</tr><!-- 두번째 줄 끝 -->
+	<tr><!-- 두번째 줄 시작 -->
+	    <td>7등급</td>
+		<td>{{ physical[6] }}</td>
+	</tr><!-- 두번째 줄 끝 -->
+	<tr><!-- 두번째 줄 시작 -->
+	    <td>8등급</td>
+		<td>{{ physical[7] }}</td>
+	</tr><!-- 두번째 줄 끝 -->
+	<tr><!-- 두번째 줄 시작 -->
+	    <td>9등급</td>
+		<td>{{ physical[8] }}</td>
+	</table>
+
+	<table border="화학 I">
+	<tr align ="center">
+	<p><td colspan = "2" span>화학 I</td></p>
+    </tr>
+	<th>등급</th>
+	<th>등급컷 원점수 범위</th>
+	<tr><!-- 첫번째 줄 시작 -->
+	    <td>1등급</td>
+		<td>{{ chemisty[0] }}</td>
+	</tr><!-- 첫번째 줄 끝 -->
+	<tr><!-- 두번째 줄 시작 -->
+	    <td>2등급</td>
+		<td>{{ chemisty[1] }}</td>
+	</tr><!-- 두번째 줄 끝 -->
+	<tr><!-- 두번째 줄 시작 -->
+	    <td>3등급</td>
+		<td>{{ chemisty[2] }}</td>
+	</tr><!-- 두번째 줄 끝 -->
+	<tr><!-- 두번째 줄 시작 -->
+	    <td>4등급</td>
+		<td>{{ chemisty[3] }}</td>
+	</tr><!-- 두번째 줄 끝 -->
+	<tr><!-- 두번째 줄 시작 -->
+	    <td>5등급</td>
+		<td>{{ chemisty[4] }}</td>
+	</tr><!-- 두번째 줄 끝 -->
+	<tr><!-- 두번째 줄 시작 -->
+	    <td>6등급</td>
+		<td>{{ chemisty[5] }}</td>
+	</tr><!-- 두번째 줄 끝 -->
+	<tr><!-- 두번째 줄 시작 -->
+	    <td>7등급</td>
+		<td>{{ chemisty[6] }}</td>
+	</tr><!-- 두번째 줄 끝 -->
+	<tr><!-- 두번째 줄 시작 -->
+	    <td>8등급</td>
+		<td>{{ chemisty[7] }}</td>
+	</tr><!-- 두번째 줄 끝 -->
+	<tr><!-- 두번째 줄 시작 -->
+	    <td>9등급</td>
+		<td>{{ chemisty[8] }}</td>
+	</table>
+
+	<table border="생명 I">
+	<tr align ="center">
+	<p><td colspan = "2" span>생명 I</td></p>
+    </tr>
+	<th>등급</th>
+	<th>등급컷 원점수 범위</th>
+	<tr><!-- 첫번째 줄 시작 -->
+	    <td>1등급</td>
+		<td>{{ life[0] }}</td>
+	</tr><!-- 첫번째 줄 끝 -->
+	<tr><!-- 두번째 줄 시작 -->
+	    <td>2등급</td>
+		<td>{{ life[1] }}</td>
+	</tr><!-- 두번째 줄 끝 -->
+	<tr><!-- 두번째 줄 시작 -->
+	    <td>3등급</td>
+		<td>{{ life[2] }}</td>
+	</tr><!-- 두번째 줄 끝 -->
+	<tr><!-- 두번째 줄 시작 -->
+	    <td>4등급</td>
+		<td>{{ life[3] }}</td>
+	</tr><!-- 두번째 줄 끝 -->
+	<tr><!-- 두번째 줄 시작 -->
+	    <td>5등급</td>
+		<td>{{ life[4] }}</td>
+	</tr><!-- 두번째 줄 끝 -->
+	<tr><!-- 두번째 줄 시작 -->
+	    <td>6등급</td>
+		<td>{{ life[5] }}</td>
+	</tr><!-- 두번째 줄 끝 -->
+	<tr><!-- 두번째 줄 시작 -->
+	    <td>7등급</td>
+		<td>{{ life[6] }}</td>
+	</tr><!-- 두번째 줄 끝 -->
+	<tr><!-- 두번째 줄 시작 -->
+	    <td>8등급</td>
+		<td>{{ life[7] }}</td>
+	</tr><!-- 두번째 줄 끝 -->
+	<tr><!-- 두번째 줄 시작 -->
+	    <td>9등급</td>
+		<td>{{ life[8] }}</td>
+	</table>
+	
+	<table border="한국지리">
+	<tr align ="center">
+	<p><td colspan = "2" span>한국지리</td></p>
+    </tr>
+	<th>등급</th>
+	<th>등급컷 원점수 범위</th>
+	<tr><!-- 첫번째 줄 시작 -->
+	    <td>1등급</td>
+		<td>{{ korean_geo[0] }}</td>
+	</tr><!-- 첫번째 줄 끝 -->
+	<tr><!-- 두번째 줄 시작 -->
+	    <td>2등급</td>
+		<td>{{ korean_geo[1] }}</td>
+	</tr><!-- 두번째 줄 끝 -->
+	<tr><!-- 두번째 줄 시작 -->
+	    <td>3등급</td>
+		<td>{{ korean_geo[2] }}</td>
+	</tr><!-- 두번째 줄 끝 -->
+	<tr><!-- 두번째 줄 시작 -->
+	    <td>4등급</td>
+		<td>{{ korean_geo[3] }}</td>
+	</tr><!-- 두번째 줄 끝 -->
+	<tr><!-- 두번째 줄 시작 -->
+	    <td>5등급</td>
+		<td>{{ korean_geo[4] }}</td>
+	</tr><!-- 두번째 줄 끝 -->
+	<tr><!-- 두번째 줄 시작 -->
+	    <td>6등급</td>
+		<td>{{ korean_geo[5] }}</td>
+	</tr><!-- 두번째 줄 끝 -->
+	<tr><!-- 두번째 줄 시작 -->
+	    <td>7등급</td>
+		<td>{{ korean_geo[6] }}</td>
+	</tr><!-- 두번째 줄 끝 -->
+	<tr><!-- 두번째 줄 시작 -->
+	    <td>8등급</td>
+		<td>{{ korean_geo[7] }}</td>
+	</tr><!-- 두번째 줄 끝 -->
+	<tr><!-- 두번째 줄 시작 -->
+	    <td>9등급</td>
+		<td>{{ korean_geo[8] }}</td>
+	</table>
+	
+	<table border="동아시아사">
+	<tr align ="center">
+	<p><td colspan = "2" span>동아시아사</td></p>
+    </tr>
+	<th>등급</th>
+	<th>등급컷 원점수 범위</th>
+	<tr><!-- 첫번째 줄 시작 -->
+	    <td>1등급</td>
+		<td>{{ east_history[0] }}</td>
+	</tr><!-- 첫번째 줄 끝 -->
+	<tr><!-- 두번째 줄 시작 -->
+	    <td>2등급</td>
+		<td>{{ east_history[1] }}</td>
+	</tr><!-- 두번째 줄 끝 -->
+	<tr><!-- 두번째 줄 시작 -->
+	    <td>3등급</td>
+		<td>{{ east_history[2] }}</td>
+	</tr><!-- 두번째 줄 끝 -->
+	<tr><!-- 두번째 줄 시작 -->
+	    <td>4등급</td>
+		<td>{{ east_history[3] }}</td>
+	</tr><!-- 두번째 줄 끝 -->
+	<tr><!-- 두번째 줄 시작 -->
+	    <td>5등급</td>
+		<td>{{ east_history[4] }}</td>
+	</tr><!-- 두번째 줄 끝 -->
+	<tr><!-- 두번째 줄 시작 -->
+	    <td>6등급</td>
+		<td>{{ east_history[5] }}</td>
+	</tr><!-- 두번째 줄 끝 -->
+	<tr><!-- 두번째 줄 시작 -->
+	    <td>7등급</td>
+		<td>{{ east_history[6] }}</td>
+	</tr><!-- 두번째 줄 끝 -->
+	<tr><!-- 두번째 줄 시작 -->
+	    <td>8등급</td>
+		<td>{{ east_history[7] }}</td>
+	</tr><!-- 두번째 줄 끝 -->
+	<tr><!-- 두번째 줄 시작 -->
+	    <td>9등급</td>
+		<td>{{ east_history[8] }}</td>
+	</table>
+
+	<table border="경제">
+	<tr align ="center">
+	<p><td colspan = "2" span>경제</td></p>
+    </tr>
+	<th>등급</th>
+	<th>등급컷 원점수 범위</th>
+	<tr><!-- 첫번째 줄 시작 -->
+	    <td>1등급</td>
+		<td>{{ eco[0] }}</td>
+	</tr><!-- 첫번째 줄 끝 -->
+	<tr><!-- 두번째 줄 시작 -->
+	    <td>2등급</td>
+		<td>{{ eco[1] }}</td>
+	</tr><!-- 두번째 줄 끝 -->
+	<tr><!-- 두번째 줄 시작 -->
+	    <td>3등급</td>
+		<td>{{ eco[2] }}</td>
+	</tr><!-- 두번째 줄 끝 -->
+	<tr><!-- 두번째 줄 시작 -->
+	    <td>4등급</td>
+		<td>{{ eco[3] }}</td>
+	</tr><!-- 두번째 줄 끝 -->
+	<tr><!-- 두번째 줄 시작 -->
+	    <td>5등급</td>
+		<td>{{ eco[4] }}</td>
+	</tr><!-- 두번째 줄 끝 -->
+	<tr><!-- 두번째 줄 시작 -->
+	    <td>6등급</td>
+		<td>{{ eco[5] }}</td>
+	</tr><!-- 두번째 줄 끝 -->
+	<tr><!-- 두번째 줄 시작 -->
+	    <td>7등급</td>
+		<td>{{ eco[6] }}</td>
+	</tr><!-- 두번째 줄 끝 -->
+	<tr><!-- 두번째 줄 시작 -->
+	    <td>8등급</td>
+		<td>{{ eco[7] }}</td>
+	</tr><!-- 두번째 줄 끝 -->
+	<tr><!-- 두번째 줄 시작 -->
+	    <td>9등급</td>
+		<td>{{ eco[8] }}</td>
+	</table>
+	
+	<table border="정치와 법">
+	<tr align ="center">
+	<p><td colspan = "2" span>정치와 법</td></p>
+    </tr>
+	<th>등급</th>
+	<th>등급컷 원점수 범위</th>
+	<tr><!-- 첫번째 줄 시작 -->
+	    <td>1등급</td>
+		<td>{{ law[0] }}</td>
+	</tr><!-- 첫번째 줄 끝 -->
+	<tr><!-- 두번째 줄 시작 -->
+	    <td>2등급</td>
+		<td>{{ law[1] }}</td>
+	</tr><!-- 두번째 줄 끝 -->
+	<tr><!-- 두번째 줄 시작 -->
+	    <td>3등급</td>
+		<td>{{ law[2] }}</td>
+	</tr><!-- 두번째 줄 끝 -->
+	<tr><!-- 두번째 줄 시작 -->
+	    <td>4등급</td>
+		<td>{{ law[3] }}</td>
+	</tr><!-- 두번째 줄 끝 -->
+	<tr><!-- 두번째 줄 시작 -->
+	    <td>5등급</td>
+		<td>{{ law[4] }}</td>
+	</tr><!-- 두번째 줄 끝 -->
+	<tr><!-- 두번째 줄 시작 -->
+	    <td>6등급</td>
+		<td>{{ law[5] }}</td>
+	</tr><!-- 두번째 줄 끝 -->
+	<tr><!-- 두번째 줄 시작 -->
+	    <td>7등급</td>
+		<td>{{ law[6] }}</td>
+	</tr><!-- 두번째 줄 끝 -->
+	<tr><!-- 두번째 줄 시작 -->
+	    <td>8등급</td>
+		<td>{{ law[7] }}</td>
+	</tr><!-- 두번째 줄 끝 -->
+	<tr><!-- 두번째 줄 시작 -->
+	    <td>9등급</td>
+		<td>{{ law[8] }}</td>
+	</table>
+	
+	<table border="일본어">
+	<tr align ="center">
+	<p><td colspan = "2" span>일본어</td></p>
+    </tr>
+	<th>등급</th>
+	<th>등급컷 원점수 범위</th>
+	<tr><!-- 첫번째 줄 시작 -->
+	    <td>1등급</td>
+		<td>{{ japanese[0] }}</td>
+	</tr><!-- 첫번째 줄 끝 -->
+	<tr><!-- 두번째 줄 시작 -->
+	    <td>2등급</td>
+		<td>{{ japanese[1] }}</td>
+	</tr><!-- 두번째 줄 끝 -->
+	<tr><!-- 두번째 줄 시작 -->
+	    <td>3등급</td>
+		<td>{{ japanese[2] }}</td>
+	</tr><!-- 두번째 줄 끝 -->
+	<tr><!-- 두번째 줄 시작 -->
+	    <td>4등급</td>
+		<td>{{ japanese[3] }}</td>
+	</tr><!-- 두번째 줄 끝 -->
+	<tr><!-- 두번째 줄 시작 -->
+	    <td>5등급</td>
+		<td>{{ japanese[4] }}</td>
+	</tr><!-- 두번째 줄 끝 -->
+	<tr><!-- 두번째 줄 시작 -->
+	    <td>6등급</td>
+		<td>{{ japanese[5] }}</td>
+	</tr><!-- 두번째 줄 끝 -->
+	<tr><!-- 두번째 줄 시작 -->
+	    <td>7등급</td>
+		<td>{{ japanese[6] }}</td>
+	</tr><!-- 두번째 줄 끝 -->
+	<tr><!-- 두번째 줄 시작 -->
+	    <td>8등급</td>
+		<td>{{ japanese[7] }}</td>
+	</tr><!-- 두번째 줄 끝 -->
+	<tr><!-- 두번째 줄 시작 -->
+	    <td>9등급</td>
+		<td>{{ japanese[8] }}</td>
+	</table>
+	
+	<a href="/"><img style="max-width: 10%; height: auto;" src="{{ url_for('static', filename='image/뒤로가기.png') }}"></a>
+	</div>
+	
+	<div id="footer">
+	<footer>
+	<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <p>Copyright © 2023 동양고등학교 프로그래밍 동아리 2조. All rights reserved.</p>
+    <p> <a href="/privacy"> 개인정보 처리방침 </a> </pre>
+	</footer>
+	</div>
+</div>
+
+
+</body>
+
+
+</html>

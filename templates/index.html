@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	<meta name="robots" content="noindex">
+	<link rel="shortcut icon" type="image⁄x-icon" href="{{ url_for('download_dongyang_icon') }}">
+    <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, 
+  maximum-scale=1.0, minimum-scale=1.0">
+    <title>동양고등학교 가채점</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  </head>
+
+<style>
+
+img { max-width:100%; height:auto }
+
+</style>
+
+<body>
+	<a href="/"><img style="max-width: 100%; height: auto; display: block; margin: 0 auto;" src="{{ url_for('static', filename='image/title.png') }}"></a>
+    </div>
+	<div class="set">
+		<div style="display: flex; justify-content: center;">
+          <div style="float:left; margin-right:10px;">
+			<a href="/add_student_form"> <img style="display: block; margin: 0 auto;" src="{{ url_for('static', filename='image/성적입력.png') }}"></a>
+		  </div>
+		  <div style="float:left; margin-right:10px;">
+			<a href="/modify"> <img style="display: block; margin: 0 auto;" src="{{ url_for('static', filename='image/성적수정.png') }}"></a>
+		  </div>
+		  <div style="float:left; margin-right:10px;">
+			<a href="/grade/average"> <img style="display: block; margin: 0 auto;" src="{{ url_for('static', filename='image/예상등급컷.png') }}"></a>
+		  </div>
+		  <br>
+
+		  <div style="float:left; margin-right:10px;">
+			<a href="https://pf.kakao.com/_PZxhGG" target="_blank"> <img style="display: block; margin: 0 auto;" src="{{ url_for('static', filename='image/카카오톡채널.png') }}"></a>
+		  </div>
+		</div>
+    </div>
+
+<footer>
+    <p>Copyright © 2023 동양고등학교 프로그래밍 동아리 2조. All rights reserved.</p>
+    <p> <a href="/privacy"> 개인정보 처리방침 </a> </pre>
+</footer>
+
+</body>
+
+
+</body>
+
+</html>
+

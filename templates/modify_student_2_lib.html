@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="robots" content="noindex">
+	<link rel="shortcut icon" type="image⁄x-icon" href="{{ url_for('download_dongyang_icon') }}">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, 
+  maximum-scale=1.0, minimum-scale=1.0">
+	<link rel="stylesheet" href="{{ url_for('static', filename='style_student.css') }}">
+    <title>성적 수정</title>
+</head>
+<body>
+    <a href="/"><img style="max-width: 100%; height: auto; display: block; margin: 0 auto;" src="{{ url_for('static', filename='image/title.png') }}"></a>
+    <img style="  width: 70%; height: auto; display: block; margin: 0 auto;" src="{{ url_for('static', filename='image/성적수정_안내사항.png') }}">
+	<form method="POST" action="/modify_student_2_lib">
+        <label for="name">이름:</label>
+        <input type="text"  name="name" required value={{ student_data['이름'] }}>
+        <br>
+        <label for="korean">독서:</label>
+        <input type="number" name="read" value={{ student_data['국어'] }} >
+        <br>
+        <label for="math">수II:</label>
+        <input type="number" name="math2" value={{ student_data['수학'] }}>
+        <br>
+        <label for="english">영어II:</label>
+        <input type="number" name="english2" value={{ student_data['영어'] }}>
+        <br>
+        <label for="korean_geo">한국지리</label>
+        <input type="number" name="korean_geo" value={{ student_data['한국지리'] }}>
+        <br>
+        <label for="east_history">동아시아사</label>
+        <input type="number" name="east_history" value={{ student_data['동아시아사'] }}>
+        <br>
+        <label for="eco">경제</label>
+        <input type="number" name="eco" value={{ student_data['경제'] }}>
+        <br>
+		<label for="law">정치와 법</label>
+        <input type="number" name="law" value={{ student_data['정치와법'] }}>
+        <br>
+		<label for="japanese">일본어 I</label>
+        <input type="number" name="japanese" value={{ student_data['일본어'] }}>
+        <br>
+        <label for="password">비밀번호:</label>
+        <input type="password"  name="password" required value={{ student_data['비밀번호'] }}>
+        <br>
+		<!-- 수정 버튼 -->
+		<input type="submit" name="action" value="수정">
+		
+		<!-- 불러오기 버튼 -->
+		<input type="submit" name="action" value="불러오기" onclick="loadStudentData()">
+		<br>
+    </form>
+    
+	<script>
+		var messages = {{ get_flashed_messages()|tojson|safe }};
+
+		if (messages.length > 0) {
+			messages.forEach(function(message) {
+				alert(message);
+			});
+		}
+	</script>
+
+	
+    <p>
+        <a href="/"><img style="max-width: 10%; height: auto;" src="{{ url_for('static', filename='image/뒤로가기.png') }}"></a>
+    </p>
+	<footer>
+		<p>Copyright © 2023 동양고등학교 프로그래밍 동아리 2조. All rights reserved.</p>
+		<p> <a href="/privacy"> 개인정보 처리방침 </a> </pre>
+	</footer>
+
+</body>
+</html>

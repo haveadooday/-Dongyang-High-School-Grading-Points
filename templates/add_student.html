@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="robots" content="noindex">
+	<link rel="shortcut icon" type="image⁄x-icon" href="{{ url_for('download_dongyang_icon') }}">
+	<meta charset="UTF-8">
+	 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, 
+  maximum-scale=1.0, minimum-scale=1.0">
+	<link rel="stylesheet" href="{{ url_for('static', filename='style_student.css') }}">
+    <title>성적 입력(1학년)</title>
+</head>
+<body>
+	<a href="/"><img style="max-width: 100%; height: auto; display: block; margin: 0 auto;" src="{{ url_for('static', filename='image/title.png') }}"></a>
+    <form method="POST" action="/add_student_form_1">
+		<img style="  width: 70%; height: auto; display: block; margin: 0 auto;" src="{{ url_for('static', filename='image/성적입력_안내사항.png') }}">
+		  
+		<div>
+        <label for="name">이름:</label>
+        <input type="text" name="name" required>
+        <br>
+        <label for="korean">국어:</label>
+        <input type="number" name="korean">
+        <br>
+        <label for="math">수학:</label>
+        <input type="number" name="math">
+        <br>
+        <label for="english">영어:</label>
+        <input type="number" name="english">
+        <br>
+        <label for="social">사회:</label>
+        <input type="number" name="social">
+        <br>
+        <label for="science">과학:</label>
+        <input type="number" name="science">
+        <br>
+        <label for="korean_history">한국사:</label>
+        <input type="number" name="korean_history">
+        <br>
+        <label for="password">비밀번호:</label>
+        <input type="password" name="password" required>
+        <br>
+        <input type="submit" value="저장">
+		</div>
+    </form>
+    
+	<script>
+        var messages = {{ get_flashed_messages()|tojson|safe }};
+        
+        if (messages.length > 0) {
+            messages.forEach(function(message) {
+                alert(message);
+            });
+        }
+    </script>	
+	
+    <p>
+        <a href="/"><img style="max-width: 10%; height: auto;" src="{{ url_for('static', filename='image/뒤로가기.png') }}"></a>
+    </p>
+	
+	<footer>
+    <p>Copyright © 2023 동양고등학교 프로그래밍 동아리 2조. All rights reserved.</p>
+    <p> <a href="/privacy"> 개인정보 처리방침 </a> </pre>
+</footer>
+</body>
+</html>

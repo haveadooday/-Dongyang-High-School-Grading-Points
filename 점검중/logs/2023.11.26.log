@@ -1,0 +1,150 @@
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.30.1.55:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 973-901-180
+INFO:werkzeug:127.0.0.1 - - [26/Nov/2023 19:25:31] "[35m[1mGET / HTTP/1.1[0m" 500 -
+ERROR:werkzeug:Error on request:
+Traceback (most recent call last):
+  File "C:\Users\Çìºê¾î\AppData\Local\Programs\Python\Python39\lib\site-packages\werkzeug\debug\__init__.py", line 330, in debug_application
+    app_iter = self.app(environ, start_response)
+  File "C:\Users\Çìºê¾î\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 2213, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "C:\Users\Çìºê¾î\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 2193, in wsgi_app
+    response = self.handle_exception(e)
+  File "C:\Users\Çìºê¾î\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Çìºê¾î\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Çìºê¾î\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Çìºê¾î\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "C:\Users\Çìºê¾î\Desktop\site\Á¡°ËÁß\app.py", line 15, in index
+    return render_template('emergency.html')
+  File "C:\Users\Çìºê¾î\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\templating.py", line 151, in render_template
+    return _render(app, template, context)
+  File "C:\Users\Çìºê¾î\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\templating.py", line 132, in _render
+    rv = template.render(context)
+  File "C:\Users\Çìºê¾î\AppData\Local\Programs\Python\Python39\lib\site-packages\jinja2\environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "C:\Users\Çìºê¾î\AppData\Local\Programs\Python\Python39\lib\site-packages\jinja2\environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "C:\Users\Çìºê¾î\Desktop\site\Á¡°ËÁß\templates\emergency.html", line 5, in top-level template code
+    <link rel="shortcut icon" type="image\u2044x-icon" href="{{ url_for('download_dongyang_icon') }}">
+  File "C:\Users\Çìºê¾î\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1697, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+  File "C:\Users\Çìºê¾î\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1686, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+  File "C:\Users\Çìºê¾î\AppData\Local\Programs\Python\Python39\lib\site-packages\werkzeug\routing\map.py", line 950, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'download_dongyang_icon'. Did you mean 'static' instead?
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Çìºê¾î\AppData\Local\Programs\Python\Python39\lib\site-packages\werkzeug\serving.py", line 364, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\Çìºê¾î\AppData\Local\Programs\Python\Python39\lib\site-packages\werkzeug\serving.py", line 327, in execute
+    for data in application_iter:
+  File "C:\Users\Çìºê¾î\AppData\Local\Programs\Python\Python39\lib\site-packages\werkzeug\debug\__init__.py", line 365, in debug_application
+    environ["wsgi.errors"].write("".join(tb.render_traceback_text()))
+AttributeError: 'NoneType' object has no attribute 'write'
+INFO:werkzeug:127.0.0.1 - - [26/Nov/2023 19:25:31] "[35m[1mGET / HTTP/1.1[0m" 500 -
+ERROR:werkzeug:Error on request:
+Traceback (most recent call last):
+  File "C:\Users\Çìºê¾î\AppData\Local\Programs\Python\Python39\lib\site-packages\werkzeug\debug\__init__.py", line 330, in debug_application
+    app_iter = self.app(environ, start_response)
+  File "C:\Users\Çìºê¾î\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 2213, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "C:\Users\Çìºê¾î\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 2193, in wsgi_app
+    response = self.handle_exception(e)
+  File "C:\Users\Çìºê¾î\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Çìºê¾î\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Çìºê¾î\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Çìºê¾î\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "C:\Users\Çìºê¾î\Desktop\site\Á¡°ËÁß\app.py", line 15, in index
+    return render_template('emergency.html')
+  File "C:\Users\Çìºê¾î\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\templating.py", line 151, in render_template
+    return _render(app, template, context)
+  File "C:\Users\Çìºê¾î\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\templating.py", line 132, in _render
+    rv = template.render(context)
+  File "C:\Users\Çìºê¾î\AppData\Local\Programs\Python\Python39\lib\site-packages\jinja2\environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "C:\Users\Çìºê¾î\AppData\Local\Programs\Python\Python39\lib\site-packages\jinja2\environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "C:\Users\Çìºê¾î\Desktop\site\Á¡°ËÁß\templates\emergency.html", line 5, in top-level template code
+    <link rel="shortcut icon" type="image\u2044x-icon" href="{{ url_for('download_dongyang_icon') }}">
+  File "C:\Users\Çìºê¾î\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1697, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+  File "C:\Users\Çìºê¾î\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1686, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+  File "C:\Users\Çìºê¾î\AppData\Local\Programs\Python\Python39\lib\site-packages\werkzeug\routing\map.py", line 950, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'download_dongyang_icon'. Did you mean 'static' instead?
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Çìºê¾î\AppData\Local\Programs\Python\Python39\lib\site-packages\werkzeug\serving.py", line 364, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\Çìºê¾î\AppData\Local\Programs\Python\Python39\lib\site-packages\werkzeug\serving.py", line 327, in execute
+    for data in application_iter:
+  File "C:\Users\Çìºê¾î\AppData\Local\Programs\Python\Python39\lib\site-packages\werkzeug\debug\__init__.py", line 365, in debug_application
+    environ["wsgi.errors"].write("".join(tb.render_traceback_text()))
+AttributeError: 'NoneType' object has no attribute 'write'
+INFO:werkzeug:127.0.0.1 - - [26/Nov/2023 19:25:31] "GET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Nov/2023 19:25:31] "GET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Nov/2023 19:25:31] "GET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Nov/2023 19:25:31] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\Çìºê¾î\\Desktop\\site\\Á¡°ËÁß\\app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 973-901-180
+INFO:werkzeug: * Detected change in 'C:\\Users\\Çìºê¾î\\Desktop\\site\\Á¡°ËÁß\\app.py', reloading
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.30.1.55:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 973-901-180
+INFO:werkzeug:127.0.0.1 - - [26/Nov/2023 19:26:11] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Nov/2023 19:26:11] "GET /static/image/±ä±ÞÁ¡°Ë.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Nov/2023 19:26:11] "GET /static/style.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Nov/2023 19:26:11] "GET /download/dongyang.ico HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Nov/2023 19:26:18] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Nov/2023 19:26:18] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Nov/2023 19:26:18] "[36mGET /static/image/±ä±ÞÁ¡°Ë.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Nov/2023 19:26:19] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\Çìºê¾î\\Desktop\\site\\Á¡°ËÁß\\app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 973-901-180
+INFO:werkzeug:127.0.0.1 - - [26/Nov/2023 19:26:35] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Nov/2023 19:26:35] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Nov/2023 19:26:35] "GET /static/image/¼­ºñ½ºÁ¾·á.png HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.30.1.55:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 973-901-180
+INFO:werkzeug:127.0.0.1 - - [26/Nov/2023 19:26:36] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Nov/2023 19:26:36] "[36mGET /download/dongyang.ico HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Nov/2023 19:26:37] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Nov/2023 19:26:37] "[36mGET /static/image/¼­ºñ½ºÁ¾·á.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Nov/2023 19:26:37] "[36mGET /download/dongyang.ico HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Nov/2023 19:26:44] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\Çìºê¾î\\Desktop\\site\\Á¡°ËÁß\\app.py', reloading
+INFO:werkzeug: * Detected change in 'C:\\Users\\Çìºê¾î\\Desktop\\site\\Á¡°ËÁß\\app.py', reloading

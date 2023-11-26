@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	<meta name="robots" content="noindex">
+	<link rel="shortcut icon" type="image⁄x-icon" href="{{ url_for('download_dongyang_icon') }}">
+    <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, 
+  maximum-scale=1.0, minimum-scale=1.0">
+    <title>문과/이과 선택</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  </head>
+
+<style>
+    input {
+        border: none;
+        border-radius: 10px; 
+        background-color: #FF5733; 
+        width: 100px; 
+        height: 100px; 
+		font-size: 30px; 
+        color: white;
+		max-width:100%; 
+		height:auto;
+    }
+</style>
+
+<body>
+	
+	<a href="/"><img style="max-width: 100%; height: auto; display: block; margin: 0 auto;" src="{{ url_for('static', filename='image/title.png') }}"></a>
+	<h1 style="text-align: center;">문과/이과를 선택해주세요</h1>
+	</div>
+	
+	<form method="POST" action="{{ url_for('depart_route', type1='modify') }}">
+    <div class="set">
+        <div style="display: flex; justify-content: center;">
+            <div style="float:left; margin-right:10px;">
+                <input type="submit" name="action" value="문과">
+            </div>
+            <div style="float:left; margin-right:10px;">
+                <input type="submit" name="action" value="이과">
+            </div>
+        </div>
+    </div>
+</form>
+    </div>
+
+<footer>
+    <p>Copyright © 2023 동양고등학교 프로그래밍 동아리 2조. All rights reserved.</p>
+    <p> <a href="/privacy"> 개인정보 처리방침 </a> </pre>
+</footer>
+
+</body>
+
+
+</body>
+
+</html>
